@@ -5,8 +5,10 @@ type Props = {
     logo : string
     phone: string
     message: string
+    width: number
+    height: number
 }
-const WhatsappButton = ({logo, phone, message}:Props) => {
+const WhatsappButton = ({logo, phone, message,width,height}:Props) => {
     const formattedMessage = message.replace(/ /g, "20%")
     return <>
     <div className='fixed bottom-2 right-2 flex flexColumn'>
@@ -15,7 +17,12 @@ const WhatsappButton = ({logo, phone, message}:Props) => {
         target="_blank"
         rel="noreferrer noopener"
         >
-            <img src={logo} alt="logo de WhatsApp" />
+            <img 
+                src={logo} 
+                height={height} 
+                width={width} 
+                alt="logo de WhatsApp" 
+            />
         </a>
     </div>
     </>
@@ -24,13 +31,18 @@ const WhatsappButton = ({logo, phone, message}:Props) => {
 WhatsappButton.propTypes ={
     logo: PropTypes.string.isRequired,
     phone: PropTypes.string.isRequired,
-    message: PropTypes.string
+    message: PropTypes.string,
+    width: PropTypes.number,
+    height: PropTypes.number
+
 }
 
 WhatsappButton.defaultProps = {
     logo: "mi-logo.png",
     phone: "12345678",
-    message: "hola"
+    message: "hola",
+    width: "40",
+    height: "40"
 }
 
 WhatsappButton.schema = {
@@ -56,7 +68,17 @@ WhatsappButton.schema = {
             widget:{
                 "ui:widget":"textarea"
             }
-        }
+        },
+        width:{
+            title: "tamaño",
+            description: "Agrega por favor nro de telefono",
+            type: "number",
+        },
+        height:{
+            title: "tamaño",
+            description: "Agrega por favor nro de telefono",
+            type: "number",
+        },
     }
 }
 
