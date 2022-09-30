@@ -2,33 +2,32 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 type Props = {
-    logo : string
+    logo: string
     phone: string
     message: string
     width: number
     height: number
 }
-const WhatsappButton = ({logo, phone, message,width,height}:Props) => {
-    const formattedMessage = message.replace(/ /g, "20%")
+const WhatsappButton = ({ logo, phone, message, width, height }: Props) => {
     return <>
-    <div className='fixed bottom-2 right-2 flex flexColumn'>
-        <a
-        href={` https://wa.me/${phone}?text=${formattedMessage}`}
-        target="_blank"
-        rel="noreferrer noopener"
-        >
-            <img 
-                src={logo} 
-                height={height} 
-                width={width} 
-                alt="logo de WhatsApp" 
-            />
-        </a>
-    </div>
+        <div className='fixed bottom-2 right-2 flex flexColumn'>
+            <a
+                href={` https://wa.me/${phone}?text=${message}`}
+                target="_blank"
+                rel="noreferrer noopener"
+            >
+                <img
+                    src={logo}
+                    height={height}
+                    width={width}
+                    alt="logo de WhatsApp"
+                />
+            </a>
+        </div>
     </>
 }
 
-WhatsappButton.propTypes ={
+WhatsappButton.propTypes = {
     logo: PropTypes.string.isRequired,
     phone: PropTypes.string.isRequired,
     message: PropTypes.string,
@@ -48,33 +47,33 @@ WhatsappButton.defaultProps = {
 WhatsappButton.schema = {
     title: "boton de whatsApp",
     type: "object",
-    properties:{
-        logo:{
+    properties: {
+        logo: {
             title: "Logo de whastApp que se relacione con la marca",
             type: "string",
-            widget:{
-                "ui:widget":"image-uploader"
+            widget: {
+                "ui:widget": "image-uploader"
             }
         },
-        phone:{
+        phone: {
             title: "Telefono",
             description: "Agrega por favor nro de telefono",
             type: "string",
         },
-        message:{
+        message: {
             title: "Mensaje",
             description: "Agrega por favor el messaje que se vera para tu cliente",
             type: "string",
-            widget:{
-                "ui:widget":"textarea"
+            widget: {
+                "ui:widget": "textarea"
             }
         },
-        width:{
+        width: {
             title: "tamaño",
             description: "Agrega por favor nro de telefono",
             type: "number",
         },
-        height:{
+        height: {
             title: "tamaño",
             description: "Agrega por favor nro de telefono",
             type: "number",
