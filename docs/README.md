@@ -26,14 +26,24 @@ ____________
   :mag:"version": "version_del_componente_actual"
   ________
 
-## :key:Dependencies
+## :key:Dependencias
+
+1. Store-theme
+
 ```ruby
   "dependencies": 
   {
     "itglobers.whatsapp-button": "0.x"
   }
 ```
+## :key:Manera de llamar al componente: 
+Ejemplo:
+```
+"flex-layout.row#example":{
+    "children":["whatsapp-button"]
+    }
+```
 
-## :black_nib:Contributors
+## :black_nib:Autor
 
  [<sub>Génesis Pinto</sub>](https://github.com/genesispinto) 
