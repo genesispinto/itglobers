@@ -10,20 +10,15 @@ ____________
 - :pushpin: `Paso 1 - Configuración Básica`: 
   Asegurarse que esta en el ambiente correcto de vtex
 
-- :pushpin: `Paso 2 - Clonación del repositorio`: 
-  Ingresar al repositorio estandar de vtex- react [<sub>https://github.com/vtex-apps/react-app-template</sub>] 
-- :pushpin: `Paso 3 - Editar el Manifest.json`: 
-  Se sugiere que se cambien los valores del vendor, versión y name si fuese necesario, los valores actuales son
+- :pushpin: `Paso 2 - Clone estos archivos` con el link proporcionado en el repositorio 
+- :pushpin: `Paso 3 - Instalacion de nodos de react`: 
+  Ingresar a la carpeta de react ejecutando el comando en consola ```$ cd react```
+  y dentro de esta instalar los nodos ejecutando en consola el comando ```$ yarn```
+- :pushpin: `Paso 4 - Linkear app a su Tienda`: 
+  Ejecute comando en consola ```$ vtex link```
   
-  ```ruby
-    "vendor": "itglobers",
-    "name": "whatsapp-button",
-    "version": "0.0.1",
-  ```
-  Si desea cambiar estos valores se recomienda:
   
-  :mag:"vendor": "nombre_del_la_tienda"<br>
-  :mag:"version": "version_del_componente_actual"
+ 
   ________
 
 ## :key:Dependencias
